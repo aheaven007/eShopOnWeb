@@ -14,7 +14,7 @@ env:
 
 jobs:
   #Build, test and publish .net web project in repository
-  buildandtest:
+  BuildAndTest:
     runs-on: ubuntu-latest
     steps:
     #checkout the repository
@@ -50,7 +50,7 @@ jobs:
         path: ${{ env.TEMPLATE-FILE }}
         
   # Use Bicep to deploy infrastructure + Publish webapp 
-  deploy:
+  Deploy:
     runs-on: ubuntu-latest
     needs: buildandtest
     environment:
